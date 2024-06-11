@@ -1,36 +1,38 @@
-const mysql = require('mysql')
-//创建连接池
+const mysql = require('mysql');
+require('dotenv').config();
+
 const pool = mysql.createPool({
-  host: 'localhost', //服务器地址
-  port:3306,
-  user: 'root', //账号
-  password: 'admin123', //密码
-  database: 'localhost_3306', //数据库名称
-})
- 
-//封装sql执行函数
+  host: process.env.DB_HOST || 'localhost',
+  port: process.env.DB_PORT || 3306,
+  user: process.env.DB_USER || 'root',
+  password: process.env.DB_PASSWORD || 'admin123',
+  database: process.env.DB_NAME || '设备信息表',
+});
+
 const executeQuery = (sql, values) => {
   return new Promise((resolve, reject) => {
     pool.getConnection((err, connection) => {
       if (err) {
-        reject(err)
-        return
+        console.error('数据库连接失败:', err);
+        reject(err);
+        return;
       }
- 
+
       connection.query(sql, values, (queryErr, results) => {
-        connection.release()
- 
+        connection.release();
+
         if (queryErr) {
-          reject(queryErr)
+          console.error('SQL查询失败:', queryErr);
+          reject(queryErr);
         } else {
-          resolve(results)
+          resolve(results);
         }
-      })
-    })
-  })
-}
- 
+      });
+    });
+  });
+};
+
 module.exports = {
   pool,
   executeQuery,
-}
+};
