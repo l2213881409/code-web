@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <title>互感器二次压降检测仪检定系统</title>
+    <link rel="stylesheet" href="./CSS/base.css">
+    <link rel="stylesheet" href="./CSS/common.css">
+   
+    <link rel="stylesheet" href="./CSS/input1.css">
+
+    <script>
+        function check(){
+        var input = document.getElementsByName("1");
+        for(var i=0; i< input.length; i++ ){
+        if(input[i].checked == true ){
+        // window.open(input[i].value,null); //新窗口打开
+        window.location=input[i].value; //当前窗口打开,注释一种方法
+        }
+        }
+        }
+        </script>
+</head>
+<body>
+          <!-- 头部 -->
+    <div class="header wrappear">
+        <div class="logo">
+            <h1><a href="#">二次压降检测仪检定系统</a></h1>
+        </div>
+        <div class="nav">
+            <ul>
+                <li><a href="index.html">首页</a></li> 
+                <li><a href="input.html">实验数据</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropbtn">
+                        进行实验
+                        <div class="dropdown-content">
+                            <a href="#" onclick="alert('实验正在进行')">开始实验</a>
+                        </div>
+                    </a>
+                </li>
+                <li><a href="result.html">实验结果</a></li>
+                <li><a href="report.html">实验报告</a></li>
+            </ul>
+        </div>
+        <div class="login">
+            <ul>
+                <li><a href="login.html">登录&注册&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a> </li>
+            </ul>
+        </div>
+
+    </div>
+<div class="header1"></div>
+
+<!-- 实验数据准备主要内容 -->
+<div class="input wrappear">
+    <div class="right">
+        <div class="top">
+          <div class="nao">
+           <ul>
+               <li><a href="./input.html">输入设备信息</a></li> 
+                <li><a href="./input1.html">输入实验数据</a></li> 
+           </ul> 
+          </div>
+        </div>
+           
+        <div class="bottom">
+         <h1>输入实验数据</h1>
+         <!-- <div class="boolen"> 
+
+            是否使用历史输入数据：
+            <input type="radio" name="1" value="./input1_1.html" onclick="check()" >是
+            <input type="radio" name="1" value="./input1.html" onclick="check()" checked="checked">否
+
+
+          </div>-->
+        <br>
+        <form action="">
+        <ul>
+           
+            <li>项目:<input type="text" name="项目" id="" placeholder="例如：PT1"></li>
+            <li>数据上限:<input type="text" name="数据上限" id="" placeholder="例如：20.4%"></li>
+            <li>数据下限:<input type="text" name="数据下限" id="" placeholder="例如：19.6%"></li>
+        </ul>
+        <br>
+        <ul>
+            <li>档位:<input type="text" name="档位" id="" placeholder="例如：100V"></li>
+            <li>百分比:<input type="text" name="百分比" id="" placeholder="例如：20%"></li>
+            
+        </ul>
+        <br>
+       <div class="butt">
+        <button type="submit" id="">确认</button>
+        <button type="reset" id="">重置</button>
+
+       </div>
+       
+    </form>
+
+    </div>
+
+
+</div>
+
+
+ 
+
+</body>
+</html>

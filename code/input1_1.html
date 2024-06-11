@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <title>互感器二次压降检测仪检定系统</title>
+    <link rel="stylesheet" href="./CSS/base.css">
+    <link rel="stylesheet" href="./CSS/common.css">
+   
+    <link rel="stylesheet" href="./CSS/input1.css">
+    <link rel="stylesheet" href="./CSS/input1_1.css">
+
+    <script>
+        function check(){
+        var input = document.getElementsByName("1");
+        for(var i=0; i< input.length; i++ ){
+        if(input[i].checked == true ){
+        // window.open(input[i].value,null); //新窗口打开
+        window.location=input[i].value; //当前窗口打开,注释一种方法
+        }
+        }
+        }
+        </script>
+</head>
+<body>
+         <!-- 头部 -->
+    <div class="header wrappear">
+        <div class="logo">
+            <h1><a href="#">二次压降检测仪检定系统</a></h1>
+        </div>
+        <div class="nav">
+            <ul>
+                <li><a href="index.html">首页</a></li> 
+                <li><a href="input.html">实验数据</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropbtn">
+                        进行实验
+                        <div class="dropdown-content">
+                            <a href="#" onclick="alert('实验正在进行')">开始实验</a>
+                        </div>
+                    </a>
+                </li>
+                <li><a href="result.html">实验结果</a></li>
+                <li><a href="report.html">实验报告</a></li>
+            </ul>
+        </div>
+    <div class="header1"></div>
+
+ <!-- 实验数据准备主要内容 -->
+    <div class="input wrappear">
+        <div class="right">
+            <div class="top">
+                <div class="nao">
+                   <ul>
+                    <li><a href="./input.html">输入设备信息</a></li> 
+                    <li><a href="./input1.html">输入实验数据</a></li> 
+                   </ul> 
+                </div>
+            </div>
+                         
+            <div class="bottom">
+            <h1>输入实验数据</h1>
+                <div class="boolen">是否使用历史输入数据：
+                   <input type="radio" name="1" value="./input1_1.html" onclick="check()" checked="checked">是
+                   <input type="radio" name="1" value="./input1.html" onclick="check()">否
+                </div>
+                <table id="tad" onmouseover="getrow(this)" onmouseout="backrow(this)" onclick="selectRow(this)">
+                    <thead>
+                        <tr>
+                            <th>
+                                项目
+                                <input id="type" type="text" list="typelist" placeholder="请选择">
+                                <datalist id="typelist">
+                                    <option>PT1</option>
+                                    <option>PT2</option>
+                                    <option>CT1</option>
+                                    <option>CT2</option>
+                                </datalist>
+                
+                                </select>
+                            </th>
+                            <th>数据上限</th>
+                            <th>数据下限</th>
+                            <th>档位</th>
+                            <th>百分比</th>
+                            <th>输入数据编号</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>PT1</td><td>20.4%</td><td>19.6%</td><td>100V</td><td>20%</td><td>1001</td></tr>
+                        <tr><td>PT2</td><td>102.0%</td><td>98.0%</td><td>100V</td><td>100%</td><td>1002</td></tr>
+                        <tr><td>CT1</td><td>5.1%</td><td>4.9%</td><td>5A</td><td>5%</td><td>1003</td></tr>
+                        <tr><td>CT2</td><td>102.0%</td><td>98.0%</td><td>5A</td><td>100%</td><td>1004</td></tr>
+                        <tr><td>PT1</td><td>22.4%</td><td>13.3%</td><td>100V</td><td>40%</td><td>1005</td></tr>
+                        <tr><td>PT1</td><td>22.4%</td><td>13.3%</td><td>100V</td><td>40%</td><td>1005</td></tr>
+                        <tr><td>PT2</td><td>33.7%</td><td>24.5%</td><td>100V</td><td>47%</td><td>1006</td></tr>
+                        <tr><td>PT2</td><td>45.6%</td><td>44.8%</td><td>100V</td><td>46%</td><td>1007</td></tr>
+                        <tr><td>PT1</td><td>56.6%</td><td>22.1%</td><td>100V</td><td>33%</td><td>1008</td></tr>
+                        <tr><td>CT1</td><td>4.4%</td><td>3.2%</td><td>5A</td><td>374%</td><td>1009</td></tr>
+                        <tr><td>CT1</td><td>3.5%</td><td>2.2%</td><td>5A</td><td>134%</td><td>1010</td></tr>
+                        <tr><td>CT1</td><td>14.4%</td><td>12.3%	</td><td>5A</td><td>102%</td><td>1011</td></tr>
+                        <tr><td>CT2</td><td>12.1%</td><td>11.1%</td><td>5A</td><td>12%</td><td>1012</td></tr>
+                        <tr><td>CT2</td><td>25.5%</td><td>26.8%</td><td>5A</td><td>11%</td><td>1013</td></tr>
+                    </tbody>
+                </table>
+                
+                <br>
+              <div class="butt">
+                <button type="submit" id="">确认</button>
+                <button type="reset" id="">重置</button>
+                
+              </div>
+            </form>
+            </div>
+        </div>
+    </div>
+   <script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script>
+        $(function () {
+        //默认让王五选中
+        //$("tr:contains('PT1')").addClass("selectHeight")
+        //点击让其展示出列表 默认让其都隐藏
+        $(".box tr.parent").click(function () {
+        $(this)
+        .toggleClass("selected")
+        .siblings(".child_" + this.id).stop().toggle();
+         }).click();//此行代码表示要立即执行
+        //设置列表查询
+        $("#type").keyup(function () {
+         $("table tbody tr").stop().hide() //将tbody中的tr都隐藏
+            .filter(":contains('" + ($(this).val()) + "')").show(); //，将符合条件的筛选出来
+            });
+         });
+    </script>
+
+    <br>
+    <form action="">
+
+
+    <script>
+
+    function getrow(obj) {
+    if (event.srcElement.tagName == "TD") {
+    curRow = event.srcElement.parentElement;
+    curRow.style.background = "yellow";
+    }
+    }
+    function backrow(obj) {
+    if (event.srcElement.tagName == "TD") {
+        curRow = event.srcElement.parentElement;
+        curRow.style.background = "#f2f2f2";
+        }
+        }
+    function selectRow(obj) {
+    if (event.srcElement.tagName == "TD") {
+        curRow = event.srcElement.parentElement;
+        curRow.style.background = "blue";
+        alert("这是第" + (curRow.rowIndex + 1) + "行");
+        }
+        }
+     </script>
+
+
+
+
+
+</div>
+
+
+</div>                         
+
+
+
+</body>
+</html>

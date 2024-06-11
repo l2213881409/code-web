@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <title>互感器二次压降检测仪检定系统</title>
+    <link rel="stylesheet" href="./CSS/base.css">
+    <link rel="stylesheet" href="./CSS/common.css">
+    <!-- <link rel="stylesheet" href="./CSS/index.css">-->
+    <link rel="stylesheet" href="./CSS/result.css">
+</head>
+    <body>
+        <!-- 头部 -->
+    <div class="header wrappear">
+        <div class="logo">
+            <h1><a href="#">二次压降检测仪检定系统</a></h1>
+        </div>
+        <div class="nav">
+            <ul>
+                <li><a href="index.html">首页</a></li> 
+                <li><a href="input.html">实验数据</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropbtn">
+                        进行实验
+                        <div class="dropdown-content">
+                            <a href="#" onclick="alert('实验正在进行')">开始实验</a>
+                        </div>
+                    </a>
+                </li>
+                <li><a href="result.html">实验结果</a></li>
+                <li><a href="report.html">实验报告</a></li>
+            </ul>
+        </div>
+        <div class="login">
+            <ul>
+                <li><a href="login.html">登录&注册&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a> </li>
+            </ul>
+        </div>
+    
+    <div class="header1"></div>
+
+
+    
+
+    <div class="right">
+        <div class="top">
+          <div class="nao">
+           <ul>
+               <li><a href="./result.html">拍照</a></li> 
+               <li><a href="./result1.html">识别</a></li> 
+           </ul> 
+          </div>
+        </div>
+
+        <div class="bottom">
+            <h1>拍照</h1>
+            <button id="button_take" style="margin-left:40px ;">拍照</button><br />
+            <button style="display: block;margin-top: -24px;margin-left: 900px;">上传</button>
+            <div style="float: left;width:50%"><video id="v"></video></div>
+            <canvas id="canvas" style="display:none;margin-top: -24px;margin-left: 900px;"></canvas><br />
+            <img src="http://placehold.it/640&text=Your%20image%20here%20..." id="photo" alt="photo" height="100px" style="float: left;margin-top: -300px;margin-left: 700px;">
+        </div>
+
+        <script>
+            !(function () {
+                // 老的浏览器可能根本没有实现 mediaDevices，所以我们可以先设置一个空的对象
+                if (navigator.mediaDevices === undefined) {
+                    navigator.mediaDevices = {};
+                }
+                if (navigator.mediaDevices.getUserMedia === undefined) {
+                    navigator.mediaDevices.getUserMedia = function (constraints) {
+                        // 首先，如果有getUserMedia的话，就获得它
+                        var getUserMedia = navigator.webkitGetUserMedia || navigator.mozGetUserMedia || navigator.msGetUserMedia;
+
+                        // 一些浏览器根本没实现它 - 那么就返回一个error到promise的reject来保持一个统一的接口
+                        if (!getUserMedia) {
+                            return Promise.reject(new Error('getUserMedia is not implemented in this browser'));
+                        }
+
+                        // 否则，为老的navigator.getUserMedia方法包裹一个Promise
+                        return new Promise(function (resolve, reject) {
+                            getUserMedia.call(navigator, constraints, resolve, reject);
+                        });
+                    }
+                }
+                const constraints = {
+                    video: true,
+                    audio: false
+                };
+                let videoPlaying = false;
+                let v = document.getElementById('v');
+                let promise = navigator.mediaDevices.getUserMedia(constraints);
+                promise.then(stream => {
+                    // 旧的浏览器可能没有srcObject
+                    if ("srcObject" in v) {
+                        v.srcObject = stream;
+                    } else {
+                        // 防止再新的浏览器里使用它，应为它已经不再支持了
+                        v.src = window.URL.createObjectURL(stream);
+                    }
+                    v.onloadedmetadata = function (e) {
+                        v.play();
+                        videoPlaying = true;
+                    };
+                }).catch(err => {
+                    console.error(err.name + ": " + err.message);
+                });
+                document.getElementById('button_take').addEventListener('click', function () {
+                    if (videoPlaying) {
+                        let canvas = document.getElementById('canvas');
+                        canvas.width = v.videoWidth;
+                        canvas.height = v.videoHeight;
+                        canvas.getContext('2d').drawImage(v, 0, 0);
+                        let data = canvas.toDataURL('image/webp');
+                        document.getElementById('photo').setAttribute('src', data);
+                        //   canvas.getContext("2d").drawImage(Img,0,0,width,height); //将图片绘制到canvas中
+                    }
+                }, false);
+            })();
+
+        </script>
+
+
+   
+
+
+
+
+
+   
+
+
+    </body>
+</html>

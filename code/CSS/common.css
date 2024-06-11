@@ -1,0 +1,144 @@
+/* 各个页面相同的样式表 ：头，尾*/
+/* 版心 */
+.wrappear{
+    width: 1260px;
+    margin: 0 auto;
+
+}
+
+
+
+.header{
+    position:fixed;
+    height: 70px;
+    background-color: rgb(255, 255, 255);
+}
+.header1{
+    height: 70px;
+    background-color: rgb(255, 255, 255);
+}
+
+.logo{
+    float: left;
+    width: 207px;
+    height: 70px;
+    
+}
+
+/* logo做法 */
+.logo h1{
+    width: 207px;
+    height: 70px;
+}
+
+.logo h1 a{
+    display: block;
+    width: 207px;
+    height: 70px;
+    background-image: url(../images/logo.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    /* 让h1里面的字看不见 */
+    font-size: 0;
+}
+
+.nav{
+    float: left;
+    margin-left: 40px;
+    height: 70px;
+ 
+    background-color: rgb(255, 255, 255) ;
+}
+.nav li{
+    float: left;
+    margin-right: 80px;
+    line-height: 70px;
+}
+
+.nav li a{
+padding-bottom: 7px;
+color: rgb(25, 67, 220);
+font-size: large;
+} 
+
+.nav li a:hover{
+    color: rgb(163, 161, 161);
+    border-bottom: 1px solid rgb(240, 240, 240);
+
+}
+
+.login{
+    margin-left: 20px;
+    margin-top: 24px;
+    float: left;
+    width: 120px;
+    height: 30px;
+     border-bottom: 2px solid #e7e7e7; 
+}
+
+.login li a{
+   padding-left: 10px;
+    width: 100px;
+    height: 3px;
+}
+
+.login li a{
+    font-size: 15px;
+    color:rgb(25, 67, 220);
+
+    background-image: url(../images/login.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: right;
+
+}
+
+
+
+
+/* 设置下拉按钮的样式 */
+.dropbtn {
+    background-color: #ffffff;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  /* 容器 <div> - 需要放置下拉内容 */
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  /* 下拉内容（默认隐藏） */
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  /* 下拉链接 */
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  /* 悬停时更改下拉链接的颜色 */
+  .dropdown-content a:hover {background-color: #f1f1f1}
+  
+  /* 悬停时显示下拉菜单 */
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  
+  /* 显示下拉内容时，更改下拉按钮的背景颜色 */
+  .dropdown:hover .dropbtn {
+    background-color: #ffffff;
+  }

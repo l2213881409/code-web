@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./CSS/login.css">
+</head>
+
+<body>
+  <div class="bg">
+    <!-- <div class="title"标题</div> -->
+  </div>
+  <div class="content">
+    账户：<input class="inputbox" type="text" name="USERNAME" placeholder="请输入工作人员账户" id="name" />
+    <br />
+    密码：<input class="inputbox" type="password" name="PASSWORD" placeholder="请输入密码" id="password"/>
+    <br />
+    <input type="submit" class="btn" onclick="loginFn()"/>
+    <br />
+    <button class="btn" onclick="qqLogin()">QQ登录</button>
+    <button class="btn" onclick="wechatLogin()">微信登录</button>
+  </div>
+  <script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+  <script>
+    function loginFn() {
+      console.log({
+          username: $('#name').val(),
+          password: $('#password').val()
+        })
+      $.ajax({
+        url: '',
+        method: 'POST',
+        data: {
+          username: $('#name').val(),
+          password: $('#password').val()
+        },
+        success: function(res) {
+          // 成功
+          console.log(res)
+          if (res.code == 200) {
+            window.location.href = '/swagger-ui/index.html?data=' + res.data
+          }
+        },
+        error: function(err) {
+          // 失败
+          console.log(err)
+        }
+      })
+    }
+
+    function qqLogin() {
+      window.location.href = 'https://graph.qq.com/oauth2.0/authorize?response_type=code&client_id=YOUR_QQ_APP_ID&redirect_uri=YOUR_REDIRECT_URI&scope=get_user_info';
+    }
+
+    function wechatLogin() {
+      window.location.href = 'https://open.weixin.qq.com/connect/qrconnect?appid=YOUR_WECHAT_APP_ID&redirect_uri=YOUR_REDIRECT_URI&response_type=code&scope=snsapi_login#wechat_redirect';
+    }
+  </script>
+</body>
+
+</html>

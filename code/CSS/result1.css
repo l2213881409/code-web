@@ -1,0 +1,105 @@
+.right{
+      margin-left: 100px;
+    height: 550px;
+    background:  rgb(215, 231, 255);
+    float: left;
+}
+
+ .right .top{
+    float: left;
+    display: block;
+    width: 100%;
+    height: 100px;
+    background-color: rgb(18, 2, 83);
+    border-bottom: 1px solid rgb(249, 249, 249);
+}
+
+
+
+ .right .bottom{
+    font-size:20px;
+    font-weight: bolder;
+    
+}
+
+
+
+
+.right .nao ul{
+    color: rgb(13, 27, 177);
+    font-size: 20px;
+    margin-left: 15%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-style: italic;
+
+}
+
+.right .nao ul li a{
+    padding-left:100px;
+    padding-right:100px;
+
+    padding-bottom: 20px;
+    color: rgb(255, 255, 255);
+}
+
+.right{
+    margin-top: 0px;
+}
+
+
+
+.right .bottom .h1{
+margin: 50px;
+margin-left: 30px;
+color: rgb(9, 88, 167);
+}
+
+.right  li{
+    float: left;
+    margin: 40px;
+    font-size: 20px;
+}
+
+.right .bottom li input{
+    height: 30px;
+    
+}
+
+.right .bottom li {
+    
+    height: 30px;
+    font-size: 20px; 
+}
+
+
+.right .bottom .butt{
+
+    margin: 80px;
+    margin-left: 110px;
+    margin-top: 200px;
+}
+
+.right .bottom button{
+    margin-left: 99px;
+    width: 120px;
+    height: 40px;
+    font-weight: bolder;
+    
+    float: left;
+}
+
+.right  img{
+    margin: 10px;
+    margin-left: 280px;
+    height: 300px;
+    }
+
+
+
+
+.right  video{
+    margin: 10px;
+    margin-left: 80px;
+    height: 300px;
+}

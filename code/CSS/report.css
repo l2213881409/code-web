@@ -1,0 +1,78 @@
+.report{
+    margin-left: 100px;
+    height: 500px;
+    background-color: rgb(215, 231, 255);
+    float: left;
+}
+
+.report h3{
+    margin: 10px;
+    margin-left: 20px;
+}
+
+.report .top{
+    margin: 20px;
+}
+
+.report .bottom{
+    margin: 20px;
+    margin-top: 40px;
+}
+
+.report .bottom .left{
+    width:380px ;
+    height: 300px;
+    float: left;
+    margin-left: 20px;
+    border: solid rgb(255, 255, 255);
+
+}
+
+.report .bottom .left li{
+    float: left;
+    margin-left: 60px;
+    margin-top: 40px;
+}
+
+.report .bottom .middle{
+    display: block;
+    width:380px ;
+    height: 300px;
+    float: left;
+    border: solid rgb(255, 255, 255);
+    margin-left: 20px;
+    
+}
+
+.report .bottom .middle li{
+    float: left;
+    margin-left: 60px;
+    margin-top: 40px;
+}
+
+.report .bottom .right{
+    float: left;
+    width:380px ;
+    height: 300px;
+    margin-left: 820px;
+    margin-top: -300px;
+    border: solid rgb(255, 255, 255);
+}
+
+.report .bottom .right li{
+    float: left;
+    margin-left: 40px;
+    margin-top: 40px;
+}
+
+.report .bottom .end{
+    display: block;
+    float: left;
+    margin: 10px;
+   margin-left: 40px;
+}
+
+.report .bottom .end button{
+    
+    margin-left: 40px;
+}

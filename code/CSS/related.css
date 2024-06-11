@@ -1,0 +1,19 @@
+.related{
+    height: 500px;
+    background-color:  rgb(215, 231, 255);
+     float: left;
+}
+.related .c{
+    margin-top: 20px;
+}
+
+.related .c h3{
+    text-align:center;
+}
+
+.related p{
+    font-size: 15px;
+    margin-left: 20px;
+    
+   
+}

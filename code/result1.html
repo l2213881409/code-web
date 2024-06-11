@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <title>互感器二次压降检测仪检定系统</title>
+    <link rel="stylesheet" href="./CSS/base.css">
+    <link rel="stylesheet" href="./CSS/common.css">
+    <!-- <link rel="stylesheet" href="./CSS/index.css">-->
+    <link rel="stylesheet" href="./CSS/result1.css">
+</head>
+    <body>
+       <!-- 头部 -->
+        <div class="header wrappear">
+            <div class="logo">
+            <h1><a href="#">二次压降检测仪检定系统</a></h1>
+        </div>
+        <div class="nav">
+            <ul>
+                <li><a href="index.html">首页</a></li> 
+                <li><a href="input.html">实验数据</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropbtn">
+                        进行实验
+                        <div class="dropdown-content">
+                            <a href="#" onclick="alert('实验正在进行')">开始实验</a>
+                        </div>
+                    </a>
+                </li>
+                <li><a href="result.html">实验结果</a></li>
+                <li><a href="report.html">实验报告</a></li>
+            </ul>
+        </div>
+            <div class="login">
+                <ul>
+                    <li><a href="login.html">登录&注册&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a> </li>
+                </ul>
+            </div>
+
+        </div>
+    <div class="header1"></div>
+
+
+    <div class="right">
+        <div class="top">
+          <div class="nao">
+           <ul>
+               <li><a href="./result.html">拍照</a></li> 
+               <li><a href="./result1.html">识别</a></li> 
+           </ul> 
+          </div>
+        </div>
+
+        <div class="bottom">
+            <h1>识别结果(实验结果）</h1>
+
+            <div class="bottom">
+                <ul>
+                    <li>产品编号：20207311</li>
+                    <li>输入数据编号：1011</li>
+                </ul>
+                
+                <ul>
+                    <li>二次电压：201</li>
+                    <li>计量点编号：2832902</li>
+                    <li>测试日期：2020-03-11</li>
+                </ul>
+                <br>
+                <ul>
+                    <li>tanα：2.2313</li>
+                    <li>温度：8.14℃</li>
+                    <li>湿度：87.1%</li>
+                </ul>
+                <ul>
+                    <li>ao:1.1212</li>
+                    <li>bo:1.233</li>
+                    <li>co:-0.1221</li>
+                </ul>
+            </div>
+
+            <div class="save">
+                <button>存储</button>
+            
+                <!-- 添加一个用于选择文件的 input 元素 -->
+                <input type="file" id="image" accept="image/*" />
+                <button onclick="submitImage()">提交</button>
+                <br /><br />
+                <!-- 添加一个用于预览图片的 div 元素 -->
+                <div id="image">
+                    <img id="image-preview"/>
+                </div>
+                <div id="json-container">
+                  <pre id="json-output"></pre>
+                </div>    
+                <script src="main.js"></script>
+                <script src="server.js"></script>
+
+        </div>
+
+
+    </div>
+
+
+
+
+
+   
+    
+</body>
+</html>

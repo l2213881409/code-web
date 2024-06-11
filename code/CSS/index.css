@@ -1,0 +1,420 @@
+/* .index页面的样式 */
+.hamepage{
+    height: 500px;
+    background-color:  rgb(215, 231, 255);
+    
+}
+
+.hamepage .left{
+    margin: 25px;
+    margin-top: 40px;
+    float: left;
+    height: 450px;
+ 
+
+}
+
+.hamepage .right{
+    margin: 50px;
+    margin-left: 80px;
+    float: left;
+    height: 450px;
+ 
+
+}
+
+.hamepage .left h1{
+   font-size: 60px;
+    color: rgb(2, 5, 83);
+}
+
+.hamepage .left p{
+    font-size: 20px;
+     color: rgb(2, 5, 83);
+ }
+
+ .hamepage .left a{
+  
+    border-radius: 6px;
+    display: flex;
+  justify-content: center; 
+  align-items: center; 
+    
+    margin: 10px;
+    width: 200px;
+    height: 40px;
+
+    background-color: rgb(25,67,220);
+    font-size: 20px;
+     color: rgb(255, 255, 255);
+     
+ }
+
+ .hamepage .left a:hover{
+    background-color: rgb(2, 5, 83);
+
+ }
+ 
+ /* 实验数据准备 */
+.paperpage{
+    
+    height: 500px;
+    background-color:  rgb(2, 5, 83);
+}
+
+.paperpage .top{
+    height: 20px;
+}
+
+.paperpage .top h1{
+    color: rgb(255, 255, 255);
+    font-size: 80px;
+    text-align: center;
+   
+}
+.paperpage .bottom{
+    margin: 20px;
+    margin-top: 200px;
+   
+}
+
+.paperpage .bottom .left{
+    border-radius: 20px;
+    margin-left: 80px;
+float: left;
+    width: 450px;
+    height: 220px;
+    background-color: #fff;
+}
+
+.paperpage .bottom .left a{
+    display: block;
+    color:  rgb(2, 5, 83);
+    font-size: 40px;
+    font-weight: bolder;
+    text-align: center;
+}
+
+.paperpage .bottom .left a:hover{
+    color:  rgb(25,67,220);
+}
+
+.paperpage .bottom .left img{
+
+    margin-left: 185px;
+    width: 60px;
+
+}
+
+.paperpage .bottom .left span{
+    display: block;
+    color:  rgb(2, 5, 83);
+    margin: 10px;
+    margin-left: 50px;
+    margin-right: 50px;
+
+}
+
+
+/* 右部分 */
+.paperpage .bottom .right{
+    border-radius: 20px;
+    margin-left: 140px;
+    float: left;
+    width: 450px;
+    height: 220px;
+    background-color: #fff;
+}
+
+.paperpage .bottom .right a{
+    display: block;
+    color:  rgb(2, 5, 83);
+    font-size: 40px;
+    font-weight: bolder;
+    text-align: center;
+}
+
+.paperpage .bottom .right a:hover{
+    color:  rgb(25,67,220);
+}
+
+.paperpage .bottom .right img{
+
+    margin-left: 185px;
+    width: 60px;
+
+}
+
+.paperpage .bottom .right span{
+    display: block;
+    color:  rgb(2, 5, 83);
+    margin: 10px;
+    margin-left: 50px;
+    margin-right: 50px;
+
+}
+
+/* 进行实验 */
+.ing{
+    height: 200px;
+    background-color:  rgb(255, 255, 255);
+}
+
+.ing .left{
+    margin: 20px;
+    margin-top: 50px;
+    margin-left: 150px;
+    float: left;
+}
+
+.ing .left  h1{
+    color:  rgb(2, 5, 83);
+
+}
+.ing .left  span{
+    display: block;
+    margin-left: 40px;
+    color:  rgb(2, 5, 83);
+
+}
+
+.ing .right{
+    margin: 20px;
+    margin-left: 110px;
+ 
+    float: left;
+}
+
+/* 实验结果获取 */
+.result{
+    height: 500px;
+    background-color:  rgb(215, 231, 255);
+}
+.result .top{
+    display: block;
+   float: left;
+}
+
+.result .top h2{
+  margin-left: 80px;
+  margin-top: 40px;
+   font-size: 50px;
+   text-align: left;
+   color:rgb(2, 5, 83);
+}
+
+.result .top p{
+    margin-left: 80px;
+    margin-top: 20px;
+     
+     text-align: left;
+     color:rgb(2, 5, 83);
+  }
+
+.result .bottom{
+
+    float: left;
+    margin: -360px;
+    margin-top: 200px;
+   
+}
+
+.result .bottom .left{
+
+    text-align: left;
+    margin-left: 10px;
+    float: left;
+    width: 330px;
+    height: 220px;
+    background-color: #fff;
+}
+
+.result .bottom .left img{
+    margin-top: 20px;
+    margin-left: 50px;
+    width: 50px;
+}
+
+.result .bottom .left p{
+    margin-top: 10px;
+    margin-left: 50px;
+    font-size: 30px;
+    font-weight:bolder;
+    color: rgb(2, 5, 83);
+}
+
+
+.result .bottom .left span{
+    margin-top: 10px;
+    margin-left: 50px;
+    
+    color: rgb(2, 5, 83);
+}
+.result .bottom .middle{
+
+    text-align: left;
+    margin-left: 50px;
+    float: left;
+    width: 330px;
+    height: 220px;
+    background-color: #fff;
+}
+
+
+.result .bottom .middle img{
+    margin-top: 20px;
+    margin-left: 50px;
+    width: 48px;
+}
+.result .bottom .middle p{
+    margin-top: 10px;
+    margin-left: 50px;
+    font-size: 30px;
+    font-weight:bolder;
+    color: rgb(2, 5, 83);
+}
+
+
+.result .bottom .middle span{
+    display: block;
+    margin-top: -20px;
+    margin-left: 50px;
+    
+    color: rgb(2, 5, 83);
+}
+
+
+.result .bottom .right{
+
+    text-align: left;
+    margin-left: 50px;
+    float: left;
+    width: 330px;
+    height: 220px;
+    background-color: #fff;
+}
+
+.result .bottom .right img{
+    margin-top: 20px;
+    margin-left: 50px;
+    width: 48px;
+}
+.result .bottom .right p{
+    margin-top: 10px;
+    margin-left: 50px;
+    font-size: 30px;
+    font-weight:bolder;
+    color: rgb(2, 5, 83);
+}
+
+
+.result .bottom .right span{
+    display: block;
+    margin-top: -20px;
+    margin-left: 50px;
+    
+    color: rgb(2, 5, 83);
+}
+
+/* 实验报告打印 */
+.report{
+    height: 500px;
+    background-color:  rgb(255, 255, 255);
+}
+
+.report .left img{
+    float: left;
+    margin: 20px;
+    margin-top:60px;
+    margin-left: 60px;
+    width: 350px;
+    
+}
+
+.report .right{
+margin: 20px;
+margin-left: 500px;
+
+}
+
+.report .right h1{
+   
+    font-size: 60px;
+
+    color:rgb(2, 5, 83);
+    border-bottom: 2px solid #e7e7e7; 
+}
+
+.report .right .right1{
+    border-bottom: 2px solid #e7e7e7; 
+}
+.report .right .right1 span{
+   
+    font-size: 30px;
+    font-weight: bolder;
+    margin: 20px;
+   margin-left: 40px ;
+    color:rgb(2, 5, 83);
+}
+
+.report .right .right1 b{
+    display: block;
+
+    margin: 20px;
+    margin-top: 10px;
+   margin-left: 40px ;
+    color:rgb(2, 5, 83);
+}
+
+
+.report .right .right2{
+    border-bottom: 2px solid #e7e7e7; 
+}
+.report .right .right2 span{
+   
+    font-size: 30px;
+    font-weight: bolder;
+    margin: 20px;
+   margin-left: 40px ;
+    color:rgb(2, 5, 83);
+}
+
+.report .right .right2 b{
+    display: block;
+
+    margin: 20px;
+    margin-top: 10px;
+   margin-left: 40px ;
+    color:rgb(2, 5, 83);
+}
+
+
+
+.report .right .right3{
+    border-bottom: 2px solid #e7e7e7; 
+}
+.report .right .right3 span{
+   
+    font-size: 30px;
+    font-weight: bolder;
+    margin: 20px;
+   margin-left: 40px ;
+    color:rgb(2, 5, 83);
+}
+
+.report .right .right3 b{
+    display: block;
+
+    margin: 20px;
+    margin-top: 10px;
+   margin-left: 40px ;
+    color:rgb(2, 5, 83);
+}
+
+
+
+
+
+
+
+

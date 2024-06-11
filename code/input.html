@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <title>互感器二次压降检测仪检定系统</title>
+    <link rel="stylesheet" href="./CSS/base.css">
+    <link rel="stylesheet" href="./CSS/common.css">
+    <link rel="stylesheet" href="./CSS/input.css">
+</head>
+<body>
+   <!-- 头部 -->
+   <div class="header wrappear">
+    <div class="logo">
+        <h1><a href="#">二次压降检测仪检定系统</a></h1>
+    </div>
+    <div class="nav">
+        <ul>
+            <li><a href="index.html">首页</a></li> 
+            <li><a href="input.html">实验数据</a></li>
+            <li class="dropdown">
+                <a href="#" class="dropbtn">
+                    进行实验
+                    <div class="dropdown-content">
+                        <a href="#" onclick="alert('实验正在进行')">开始实验</a>
+                    </div>
+                </a>
+            </li>
+            <li><a href="result.html">实验结果</a></li>
+            <li><a href="report.html">实验报告</a></li>
+        </ul>
+    </div>
+    <div class="login">
+        <ul>
+        <li><a href="login.html">登录&注册&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a> </li>
+        </ul>
+    </div>
+    
+</div>
+<div class="header1"></div>
+
+<!-- 实验数据准备主要内容 -->
+<div class="input wrappear">
+    <div class="right">
+        <div class="top">
+          <div class="nao">
+           <ul>
+               <li><a href="./input.html">输入设备信息</a></li> 
+                <li><a href="./input1.html">输入实验数据</a></li> 
+           </ul> 
+          </div>
+        </div>
+           
+        <div class="bottom">
+        <h1>输入设备信息</h1>
+        <form  
+        id="Form"
+        accept-charset="UTF-8"
+        action = "http://127.0.0.1:5500/"
+        method="post"
+        target="myiframe"
+        onsubmit="return checkin()">
+        <ul>
+            <li>产品编号:<input type="text" name="产品编号" id="1" placeholder="例如：20207310"></li>
+            <li>产品名称:<input type="text" name="产品名称" id="2" placeholder="例如：HVPD731互感器二次压降测试仪"></li>
+            <li>制造商:<input type="text" name="制造商" id="3" placeholder="例如：扬州海沃电气科技有限公司"></li>
+        </ul>
+        <br>
+        <ul>
+            <li>生产日期:<input type="datetime-local" name="生产日期" id="4"></li>
+            <li>送检日期:<input type="datetime-local" name="送检日期" id="5"></li>
+            <li>设备产地:<input type="text" name="设备产地" id="6" placeholder="例如：江苏扬州"></li>
+        </ul>
+        <br>
+       <div class="butt">
+        <button type="submit" id="">确认</button>
+        <button type="reset" id="">重置</button>
+
+       </div>
+       
+    </form>
+
+    </div>
+
+
+</div>
+</body>
+
+<script>
+    $(document).ready(function() {  
+    $('#myForm').on('submit', function(e) {  
+        e.preventDefault(); // 阻止表单的默认提交行为  
+  
+        var form = $(this); // 获取表单的jQuery对象  
+        var formData = new FormData(form[0]); // FormData需要原生的form元素  
+  
+        $.ajax({  
+            type: 'POST',  
+            url: 'http://127.0.0.1:5500/', // 假设你的Node.js服务器正在监听这个路由  
+            data: formData,  
+            processData: false, // 告诉jQuery不要去处理发送的数据  
+            contentType: false, // 告诉jQuery不要去设置Content-Type请求头  
+            success: function(data) {  
+                console.log(data);  
+                alert('提交数据成功');  
+                form[0].reset(); // 重置表单  
+            },  
+            error: function(xhr, status, error) {  
+                console.error('Error: ' + error);  
+                alert('提交数据失败');  
+            }  
+        });  
+    });  
+  
+    // 为重置按钮绑定事件（如果需要）  
+    $('#resetBtn').on('click', function() {  
+        $('#myForm')[0].reset();  
+    });  
+});
+</script>
+
+
+
+
+
+</html>
